@@ -13,7 +13,8 @@ class GPT:
 
     def ask_question(self, question: str) -> str:
         try:
-            if question+'\n' == self.conversation[-2]: return
+            if question+'\n' == self.conversation[-2]:
+                return
         except:
             pass
         conversation_history = " ".join([str(item) for item in self.conversation])
