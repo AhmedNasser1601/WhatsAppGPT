@@ -85,4 +85,4 @@ class WhatsApp:
             else: print("There is no questions!")
 
 if __name__ == "__main__":
-    WhatsApp(sys.argv[1], GPT(sys.argv[2])).run
+    WhatsApp(sys.argv[1], GPT(sys.argv[2])).run()
