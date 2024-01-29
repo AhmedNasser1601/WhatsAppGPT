@@ -1,6 +1,7 @@
 import unittest
 
 from WhatsAppGPT import WhatsApp
+import unittest
 
 
 class TestWhatsApp(unittest.TestCase):
