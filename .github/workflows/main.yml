@@ -1,0 +1,41 @@
+The modified `main.yml` file:
+
+name: Python CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.10
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run tests
+      run: |
+        pytest
+
+This modified `main.yml` file includes the following changes:
+
+1. Added a step to install dependencies using `pip install -r requirements.txt`.
+2. Added a step to run the tests using `pytest`.
+
+Commit message: "feat/fix: Fix failing GitHub Actions on main.yml"
