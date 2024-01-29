@@ -5,7 +5,6 @@ ChatBot integrated with WhatsApp using OpenAI API, able to answer questions and 
 ```console
 pip install -r requirements.txt
 ```
-
 ### [2] Run the ChatBot
 ```console
 python WhatsAppGPT.py <Phone Number> <API Key>
